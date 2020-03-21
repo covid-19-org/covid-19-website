@@ -1,20 +1,38 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { Button } from "@chakra-ui/core"
+
+const headerStyling = {
+  fontStyle: "normal",
+  fontWeight: "bold",
+  fontSize: "84px",
+  lineHeight: "95px",
+  color: "#fff",
+  maxWidth: "847px",
+}
+
+const buttonStyling = {
+  backgroundColor: "#FFEE56",
+}
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div
+      style={{
+        margin: `0 auto`,
+        maxWidth: 1300,
+        padding: "1.45rem 1.0875rem",
+      }}
+    >
+      <h1 style={headerStyling}>Need help in Quarantine?</h1>
+      <Button style={buttonStyling}>SUPPORT RESOURCES</Button>
+      <h1 style={headerStyling}>
+        Be part of the #code4covid Tech Response team
+      </h1>
+      <Button style={buttonStyling}>VOLUNTEER</Button>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
