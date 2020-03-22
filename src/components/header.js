@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import {
+  DarkMode,
   Button,
   Flex,
   Stack,
@@ -18,8 +19,8 @@ import { Link } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
-  { children: "Page 1", to: "/tech-landing/" },
-  { children: "Page 2", to: "/2" },
+  { children: "Volunteer", to: "/tech-landing/" },
+  { children: "Page 2", to: "/404/" },
 ]
 
 const NavLink = props => (
@@ -68,25 +69,27 @@ const Header = () => {
         </Stack>
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
           <DrawerOverlay />
-          <DrawerContent backgroundColor="gray.700" color="white">
-            <DrawerCloseButton />
-            <DrawerBody>
-              <Stack as="nav" direction="column" marginTop={16} spacing={8}>
-                {PAGES.map(page => (
-                  <NavLink
-                    key={page.children + page.to}
-                    fontSize={28}
-                    css={css`
-                      [aria-current]& {
-                        font-weight: 800;
-                      }
-                    `}
-                    {...page}
-                  />
-                ))}
-              </Stack>
-            </DrawerBody>
-          </DrawerContent>
+          <DarkMode>
+            <DrawerContent backgroundColor="gray.700" color="white">
+              <DrawerCloseButton />
+              <DrawerBody>
+                <Stack as="nav" direction="column" marginTop={16} spacing={8}>
+                  {PAGES.map(page => (
+                    <NavLink
+                      key={page.children + page.to}
+                      fontSize={28}
+                      css={css`
+                        [aria-current]& {
+                          font-weight: 800;
+                        }
+                      `}
+                      {...page}
+                    />
+                  ))}
+                </Stack>
+              </DrawerBody>
+            </DrawerContent>
+          </DarkMode>
         </Drawer>
       </Flex>
     </header>
