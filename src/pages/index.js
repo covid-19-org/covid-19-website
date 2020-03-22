@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Button } from "@chakra-ui/core"
+import { Link } from "gatsby"
 
 const headerStyling = {
   fontStyle: "normal",
@@ -31,7 +32,9 @@ const IndexPage = () => (
       <h1 style={headerStyling}>
         Be part of the #code4covid Tech Response team
       </h1>
-      <Button style={buttonStyling}>VOLUNTEER</Button>
+      <Link to="/tech-landing/">
+        <Button style={buttonStyling}>VOLUNTEER</Button>
+      </Link>
     </div>
   </Layout>
 )

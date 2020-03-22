@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import code4covid from "../images/code4covid.svg"
+import { Link } from "gatsby"
 
 const Header = () => (
   <header
@@ -15,7 +16,13 @@ const Header = () => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <img style={{ marginBottom: 0 }} src={code4covid} alt="code4covidLogo" />
+      <Link to="/">
+        <img
+          style={{ marginBottom: 0 }}
+          src={code4covid}
+          alt="code4covidLogo"
+        />
+      </Link>
     </div>
   </header>
 )
