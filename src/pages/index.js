@@ -15,6 +15,7 @@ const headerStyling = {
 
 const buttonStyling = {
   backgroundColor: "#FFEE56",
+  margin: "50px 0px",
 }
 
 const IndexPage = () => (
