@@ -1,0 +1,9 @@
+name: Greet Everyone
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
