@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "covid-19-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The main code4covid website ",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
@@ -9,26 +9,26 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "eslint": "^6.8.0",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-loader": "^3.0.3",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-chakra-ui": "^0.1.4",
     "gatsby-plugin-eslint": "^2.0.8",
-    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-manifest": "^2.3.2",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
-    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-source-filesystem": "^2.1.56",
-    "gatsby-transformer-sharp": "^2.3.19",
+    "gatsby-transformer-sharp": "^2.4.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "eslint": "^6.8.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-loader": "^3.0.3"
   },
   "keywords": [
     "gatsby"
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/covid-19-org/covid-19-website"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
