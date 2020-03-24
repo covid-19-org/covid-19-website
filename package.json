@@ -25,10 +25,10 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
     "eslint": "^6.8.0",
     "eslint-config-react-app": "^5.2.1",
-    "eslint-loader": "^3.0.3"
+    "eslint-loader": "^3.0.3",
+    "prettier": "^1.19.1"
   },
   "keywords": [
     "gatsby"
