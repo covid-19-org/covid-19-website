@@ -1,7 +1,7 @@
 {
   "name": "covid-19-website",
   "private": true,
-  "description": "The main code4covid website ",
+  "description": "The code4covid public website ",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
