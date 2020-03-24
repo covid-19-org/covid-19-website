@@ -61,7 +61,7 @@ const Header = () => {
           display={["none", "none", "block"]}
           as="nav"
           direction="row"
-          spacing={2}
+          spacing={.5}
         >
           {PAGES.map(page => (
             <NavLink key={page.children + page.to} {...page} />

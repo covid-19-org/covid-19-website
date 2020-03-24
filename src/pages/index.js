@@ -3,19 +3,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Button } from "@chakra-ui/core"
 import { Link } from "gatsby"
+import './index.css';
 
 const headerStyling = {
   fontStyle: "normal",
   fontWeight: "bold",
-  fontSize: "84px",
-  lineHeight: "95px",
   color: "#fff",
   maxWidth: "847px",
 }
 
 const buttonStyling = {
   backgroundColor: "#FFEE56",
-  margin: "50px 0px",
+  margin: "40px 0px",
 }
 
 const IndexPage = () => (

@@ -1,0 +1,14 @@
+/* Smart Phones */
+@media (min-width: 320px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1224px) {
+  h1 {
+    font-size: 84px;
+    line-height: 95px;
+  }
+}
