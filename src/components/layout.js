@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Box } from '@chakra-ui/core'
 
 import Header from "./header"
 import Footer from "./footer"
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{ fontFamily: "Montserrat, sans-serif" }}>
+    <Box fontFamily="Montserrat, sans-serif">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -34,7 +35,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <Footer />
       </div>
-    </div>
+    </Box>
   )
 }
 

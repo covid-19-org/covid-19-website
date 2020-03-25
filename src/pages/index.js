@@ -1,14 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button } from "@chakra-ui/core"
+import { Button, Heading } from "@chakra-ui/core"
 import { Link } from "gatsby"
-import './index.css';
 
 const headerStyling = {
-  fontStyle: "normal",
-  fontWeight: "bold",
-  color: "#fff",
+  color: "white",
+  fontSize: ["36px", "84px"],
   maxWidth: "847px",
 }
 
@@ -27,11 +25,11 @@ const IndexPage = () => (
         padding: "1.45rem 1.0875rem",
       }}
     >
-      <h1 style={headerStyling}>Need help in Quarantine?</h1>
-      <Button style={buttonStyling}>SUPPORT RESOURCES</Button>
-      <h1 style={headerStyling}>
+      <Heading {...headerStyling}>Need help in Quarantine?</Heading>
+      <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
+      <Heading {...headerStyling}>
         Be part of the #code4covid Tech Response team
-      </h1>
+      </Heading>
       <Link to="/tech-landing/">
         <Button style={buttonStyling}>VOLUNTEER</Button>
       </Link>

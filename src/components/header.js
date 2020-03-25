@@ -10,6 +10,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
+  Image,
   useDisclosure,
   css,
 } from "@chakra-ui/core"
@@ -24,7 +25,7 @@ const PAGES = [
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" size="lg" as={Link} {...props} />
+  <Button variant="ghost" size="md" as={Link} color="#2F3B45" {...props} />
 )
 
 const Header = () => {
@@ -39,14 +40,16 @@ const Header = () => {
       <Flex
         margin="0 auto"
         maxWidth={1300}
-        padding="1.45rem 1.0875rem"
+        paddingY={[1,6]}
+        paddingX={5}
         justifyContent="space-between"
+        alignItems="center"
       >
         <Link to="/">
-          <img
-            style={{ marginBottom: 0 }}
+          <Image
             src={code4covid}
             alt="code4covidLogo"
+            width={[125, 200]}
           />
         </Link>
         <IconButton
@@ -56,12 +59,13 @@ const Header = () => {
           aria-label="Navigation Button"
           icon="menu"
           onClick={onOpen}
+          minWidth={0}
         />
         <Stack
           display={["none", "none", "block"]}
           as="nav"
           direction="row"
-          spacing={.5}
+          spacing={1}
         >
           {PAGES.map(page => (
             <NavLink key={page.children + page.to} {...page} />
