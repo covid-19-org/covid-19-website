@@ -25,7 +25,7 @@ const PAGES = [
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" size="md" as={Link} color="black" fontWeight={500} {...props} />
+  <Button variant="ghost" size="md" as={Link} fontWeight={500} {...props} />
 )
 
 const Header = () => {

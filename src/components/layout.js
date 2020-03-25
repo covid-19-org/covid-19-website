@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <Flex minHeight="100vh" flexDirection="column">
+    <Flex minHeight="100vh" flexDirection="column" color="#2F3B45">
       <Header siteTitle={data.site.siteMetadata.title} />
       <Main>{children}</Main>
       <Footer />

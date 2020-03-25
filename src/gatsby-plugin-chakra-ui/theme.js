@@ -12,10 +12,6 @@ export default {
     normal: 500,
     bold: 700,
   },
-  colors: {
-    ...theme.colors,
-    black: "#2F3B45",
-  },
   icons: {
     ...theme.icons,
     menu: {

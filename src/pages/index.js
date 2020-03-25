@@ -14,7 +14,6 @@ const headerStyling = {
 
 const buttonStyling = {
   backgroundColor: "#FFEE56",
-  color: "black",
   margin: "40px 0px",
 }
 
