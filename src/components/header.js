@@ -35,7 +35,7 @@ const Header = () => {
     <Flex
       as="header"
       backgroundColor="white"
-      paddingX={["1rem", "4rem"]}
+      paddingX={["1rem", "4.5rem"]}
       paddingY={[1,6]}
       justifyContent="space-between"
       alignItems="center"

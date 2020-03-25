@@ -9,10 +9,10 @@ const Footer = () => (
   <Flex
     as="footer"
     backgroundColor="#2F3B45"
-    paddingX={["1rem", "4rem"]}
+    paddingX={["1rem", "4.5rem"]}
     paddingY={"2rem"}
     justifyContent="space-between"
-    minHeight={300}
+    minHeight={250}
   >
     <Box color="white">
       <Heading paddingBottom={5}>

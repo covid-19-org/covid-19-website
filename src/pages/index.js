@@ -9,7 +9,7 @@ const headerStyling = {
   fontSize: ["36px", "48px", "84px"],
   maxWidth: "847px",
   fontWeight: "bold",
-  marginTop: "40px"
+  marginTop: [5,10],
 }
 
 const buttonStyling = {
@@ -24,8 +24,8 @@ const IndexPage = () => (
     <Box
       as="section"
       backgroundColor={"#B56AFF"}
-      paddingX={["1rem", "4rem"]}
-      paddingY={8}
+      paddingX={["1rem", "4.5rem"]}
+      paddingY={[1,8]}
     >
       <Heading {...headerStyling}>Need help in Quarantine?</Heading>
       <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
@@ -38,9 +38,9 @@ const IndexPage = () => (
     </Box>
     <Box
       as="section"
-      fontSize={24}
+      fontSize={[16, 24]}
       maxWidth={800}
-      paddingX={["1rem", "4rem"]}
+      paddingX={["1rem", "4.5rem"]}
       paddingY={8}
     >
       <Heading paddingBottom={6}>Who we are</Heading>
