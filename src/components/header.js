@@ -20,7 +20,7 @@ import { Link } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
-  { children: "Resources", to: "/resources/" },
+  { children: "Support Resources", to: "/support-resources/" },
   { children: "Volunteer", to: "/tech-landing/" },
 ]
 
