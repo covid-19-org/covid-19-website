@@ -27,6 +27,7 @@ const TechLanding = () => (
       <h1 style={headerStyling}>Get involved!</h1>
       <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
       <iframe
+        title="Sign Up Form"
         src="https://airtable.com/embed/shruuF50gMQCJFkW0?backgroundColor=blue"
         className="airtable-embed airtable-dynamic-height"
         frameBorder="0"

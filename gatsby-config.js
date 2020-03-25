@@ -27,7 +27,8 @@ module.exports = {
         icon: `src/images/c4clogo.svg`, // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-chakra-ui",
+    `gatsby-plugin-eslint`,
+    `gatsby-plugin-chakra-ui`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
