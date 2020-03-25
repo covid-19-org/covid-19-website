@@ -17,7 +17,7 @@ const headerStyling = {
 }
  */
 
-const TechLanding = () => {
+const TechVolunteerLanding = () => {
   const spinnerRef = useRef();
 
   const hideSpinner = () => spinnerRef.current.style.display = 'none';
@@ -46,4 +46,4 @@ const TechLanding = () => {
   )
 };
 
-export default TechLanding
+export default TechVolunteerLanding

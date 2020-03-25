@@ -23,7 +23,7 @@ const Footer = () => (
           <Link to="/support-resources">Support Resources</Link>
         </ListItem>
         <ListItem>
-          <Link to="/tech-landing">Volunteer</Link>
+          <Link to="/tech-volunteers">Tech Volunteers</Link>
         </ListItem>
       </List>
     </Box>
