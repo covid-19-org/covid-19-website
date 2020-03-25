@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/core';
 
 const Main = ({ children }) => {
   return (
-    <Box as="main">
+    <Box as="main" flex={1}>
       {children}
     </Box>
   )
