@@ -7,8 +7,10 @@ export default {
     body: "Montserrat, sans-serif",
     heading: "Montserrat, sans-serif",
   },
-  fontSizes: {
-    ...theme.fontSizes,
+  fontWeights: {
+    ...theme.fontWeights,
+    normal: 500,
+    bold: 700,
   },
   colors: {
     ...theme.colors,
