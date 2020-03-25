@@ -21,7 +21,7 @@ import { Link } from "gatsby"
 const PAGES = [
   { children: "Home", to: "/" },
   { children: "Support Resources", to: "/support-resources/" },
-  { children: "Volunteer", to: "/tech-landing/" },
+  { children: "Tech Volunteers!", to: "/tech-volunteers/" },
 ]
 
 const NavLink = props => (
