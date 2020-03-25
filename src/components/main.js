@@ -1,12 +1,9 @@
 import React from 'react'
 import { Box } from '@chakra-ui/core';
 
-const Main = ({ style, children }) => {
+const Main = ({ children }) => {
   return (
-    <Box
-      as="main"
-      {...style}
-    >
+    <Box as="main">
       {children}
     </Box>
   )
