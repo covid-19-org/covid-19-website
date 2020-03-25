@@ -10,6 +10,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
+  Image,
   useDisclosure,
   css,
 } from "@chakra-ui/core"
@@ -19,80 +20,77 @@ import { Link } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
+  { children: "Support Resources", to: "/support-resources/" },
   { children: "Volunteer", to: "/tech-landing/" },
-  { children: "Page 2", to: "/404/" },
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" size="lg" as={Link} {...props} />
+  <Button variant="ghost" size="md" as={Link} fontWeight={500} {...props} />
 )
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <header
-      style={{
-        background: `white`,
-      }}
+    <Flex
+      as="header"
+      backgroundColor="white"
+      paddingX={["1rem", "4.5rem"]}
+      paddingY={[1,6]}
+      justifyContent="space-between"
+      alignItems="center"
     >
-      <Flex
-        margin="0 auto"
-        maxWidth={1300}
-        padding="1.45rem 1.0875rem"
-        justifyContent="space-between"
-      >
-        <Link to="/">
-          <img
-            style={{ marginBottom: 0 }}
-            src={code4covid}
-            alt="code4covidLogo"
-          />
-        </Link>
-        <IconButton
-          display={["block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
-          variant="ghost"
-          size="lg"
-          aria-label="Navigation Button"
-          icon="menu"
-          onClick={onOpen}
+      <Link to="/">
+        <Image
+          src={code4covid}
+          alt="code4covidLogo"
+          width={[125, 200]}
         />
-        <Stack
-          display={["none", "none", "block"]}
-          as="nav"
-          direction="row"
-          spacing={2}
-        >
-          {PAGES.map(page => (
-            <NavLink key={page.children + page.to} {...page} />
-          ))}
-        </Stack>
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
-          <DrawerOverlay />
-          <DarkMode>
-            <DrawerContent backgroundColor="gray.700" color="white">
-              <DrawerCloseButton />
-              <DrawerBody>
-                <Stack as="nav" direction="column" marginTop={16} spacing={8}>
-                  {PAGES.map(page => (
-                    <NavLink
-                      key={page.children + page.to}
-                      fontSize={28}
-                      css={css`
-                        [aria-current]& {
-                          font-weight: 800;
-                        }
-                      `}
-                      {...page}
-                    />
-                  ))}
-                </Stack>
-              </DrawerBody>
-            </DrawerContent>
-          </DarkMode>
-        </Drawer>
-      </Flex>
-    </header>
+      </Link>
+      <IconButton
+        display={["block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
+        variant="ghost"
+        size="lg"
+        aria-label="Navigation Button"
+        icon="menu"
+        onClick={onOpen}
+      />
+      <Stack
+        display={["none", "none", "block"]}
+        as="nav"
+        direction="row"
+        spacing={1}
+      >
+        {PAGES.map(page => (
+          <NavLink key={page.children + page.to} fontWeight={700} {...page} />
+        ))}
+      </Stack>
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+        <DrawerOverlay />
+        <DarkMode>
+          <DrawerContent backgroundColor="gray.700" color="white">
+            <DrawerCloseButton />
+            <DrawerBody>
+              <Stack as="nav" direction="column" marginTop={16} spacing={8}>
+                {PAGES.map(page => (
+                  <NavLink
+                    key={page.children + page.to}
+                    fontSize={28}
+                    color="white"
+                    css={css`
+                      [aria-current]& {
+                        font-weight: 700;
+                      }
+                    `}
+                    {...page}
+                  />
+                ))}
+              </Stack>
+            </DrawerBody>
+          </DrawerContent>
+        </DarkMode>
+      </Drawer>
+    </Flex>
   )
 }
 

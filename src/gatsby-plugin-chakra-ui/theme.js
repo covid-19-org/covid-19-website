@@ -3,6 +3,15 @@ import { theme } from "@chakra-ui/core"
 
 export default {
   ...theme,
+  fonts: {
+    body: "Montserrat, sans-serif",
+    heading: "Montserrat, sans-serif",
+  },
+  fontWeights: {
+    ...theme.fontWeights,
+    normal: 500,
+    bold: 700,
+  },
   icons: {
     ...theme.icons,
     menu: {

@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Spinner, Heading, Box } from "@chakra-ui/core"
 
+/**
 const headerStyling = {
   fontStyle: "normal",
   fontWeight: "bold",
@@ -13,33 +15,35 @@ const headerStyling = {
   margin: "0 auto",
   marginBottom: "2rem",
 }
+ */
 
-const TechLanding = () => (
+const TechLanding = () => {
+  const spinnerRef = useRef();
+
+  const hideSpinner = () => spinnerRef.current.style.display = 'none';
+
+  return (
   <Layout>
-    <SEO title="Home" />
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1300,
-        padding: "1.45rem 1.0875rem",
-      }}
-    >
-      <h1 style={headerStyling}>Get involved!</h1>
-      <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-      <iframe
-        title="Sign Up Form"
-        src="https://airtable.com/embed/shruuF50gMQCJFkW0?backgroundColor=blue"
-        className="airtable-embed airtable-dynamic-height"
-        frameBorder="0"
-        onMouseWheel=""
-        width="100%"
-        maxWidth="1000px"
-        margin="0 auto"
-        height="3800"
-        background="transparent"
-      ></iframe>
-    </div>
-  </Layout>
-)
+      <SEO title="Home" />
+      <Box textAlign="center">
+        <Heading>Get involved!</Heading>
+
+        <Spinner ref={spinnerRef} marginTop={200}/>
+
+        <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+        <iframe
+          title="Sign Up Form"
+          src="https://airtable.com/embed/shruuF50gMQCJFkW0?backgroundColor=blue"
+          className="airtable-embed airtable-dynamic-height"
+          frameBorder="0"
+          width="100%"
+          height="3900"
+          background="transparent"
+          onLoad={hideSpinner}
+        ></iframe>
+      </Box>
+    </Layout>
+  )
+};
 
 export default TechLanding

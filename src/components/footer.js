@@ -1,27 +1,40 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { Box, Image, Flex, Heading, ListItem, List } from '@chakra-ui/core';
+import { Link } from "gatsby";
+
 import code4coviddark from "../images/code4coviddark.svg"
 
 const Footer = () => (
-  <footer
-    style={{
-      background: `#2F3B45`,
-    }}
+  <Flex
+    as="footer"
+    backgroundColor="#2F3B45"
+    paddingX={["1rem", "4.5rem"]}
+    paddingY={"2rem"}
+    justifyContent="space-between"
+    minHeight={250}
   >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1300,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <img
-        style={{ marginBottom: 0 }}
+    <Box color="white">
+      <Heading paddingBottom={5}>
+        Useful Links
+      </Heading>
+      <List textDecoration="underline" lineHeight={2}>
+        <ListItem>
+          <Link to="/support-resources">Support Resources</Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/tech-landing">Volunteer</Link>
+        </ListItem>
+      </List>
+    </Box>
+    <Flex alignSelf="flex-end">
+      <Image
         src={code4coviddark}
         alt="code4covidLogo"
+        width={[125, 200]}
       />
-    </div>
-  </footer>
+    </Flex>
+  </Flex>
 )
 
 Footer.propTypes = {

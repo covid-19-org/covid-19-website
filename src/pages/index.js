@@ -1,41 +1,52 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button } from "@chakra-ui/core"
+import { Button, Heading, Text } from "@chakra-ui/core"
 import { Link } from "gatsby"
+import Section from "../components/section"
 
 const headerStyling = {
-  fontStyle: "normal",
-  fontWeight: "bold",
-  fontSize: "84px",
-  lineHeight: "95px",
-  color: "#fff",
+  color: "white",
+  fontSize: ["36px", "48px", "64px", "64px", "84px"],
   maxWidth: "847px",
+  fontWeight: "bold",
+  marginTop: [5,10],
 }
 
 const buttonStyling = {
   backgroundColor: "#FFEE56",
+  margin: "40px 0px",
 }
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1300,
-        padding: "1.45rem 1.0875rem",
-      }}
+    <Section
+      backgroundColor={"#B56AFF"}
+      paddingY={[1,8]}
     >
-      <h1 style={headerStyling}>Need help in Quarantine?</h1>
-      <Button style={buttonStyling}>SUPPORT RESOURCES</Button>
-      <h1 style={headerStyling}>
+      <Heading {...headerStyling}>Need help in Quarantine?</Heading>
+      <Link to="/support-resources/">
+        <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
+      </Link>
+      <Heading {...headerStyling}>
         Be part of the #code4covid Tech Response team
-      </h1>
+      </Heading>
       <Link to="/tech-landing/">
         <Button style={buttonStyling}>VOLUNTEER</Button>
       </Link>
-    </div>
+    </Section>
+
+    <Section
+      fontSize={[16, 24]}
+      maxWidth={800}
+      paddingY={8}
+    >
+      <Heading paddingBottom={6}>Who we are</Heading>
+      <Text>
+        We are a team of helpers to help...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae enim mi. Etiam eget mi mi. In rhoncus nibh dolor, vel pulvinar ipsum pharetra eget. Aenean diam dolor, ullamcorper vitae dolor sit amet, convallis faucibus est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed euismod tortor sed suscipit aliquam. Curabitur sollicitudin lorem non nisl bibendum, nec iaculis metus bibendum.
+      </Text>
+    </Section>
   </Layout>
 )
 
