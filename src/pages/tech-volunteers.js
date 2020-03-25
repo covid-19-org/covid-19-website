@@ -1,49 +1,83 @@
-import React, { useRef } from "react"
+import React from "react"
+import { Heading, Button, Text, List, ListItem } from "@chakra-ui/core"
+import { Link } from "gatsby"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Spinner, Heading, Box } from "@chakra-ui/core"
+import Section from "../components/section"
 
-/**
 const headerStyling = {
-  fontStyle: "normal",
+  color: "white",
+  fontSize: ["32px", "48px", "64px", "64px", "84px"],
+  maxWidth: "1400px",
   fontWeight: "bold",
-  fontSize: "84px",
-  lineHeight: "95px",
-  color: "#fff",
-  maxWidth: "847px",
-  textAlign: "center",
-  margin: "0 auto",
-  marginBottom: "2rem",
+  marginTop: [5,10],
+  paddingBottom: 20,
 }
- */
 
-const TechVolunteerLanding = () => {
-  const spinnerRef = useRef();
+const buttonStyling = {
+  backgroundColor: "#FFEE56",
+  margin: "80px 0px 40px",
+}
 
-  const hideSpinner = () => spinnerRef.current.style.display = 'none';
+const textStyling = {
+  fontSize: "35px",
+  paddingY: 5,
+  color: "white",
+  fontWeight: "bold",
+}
 
+const TechVolunteers = () => {
   return (
-  <Layout>
+    <Layout>
       <SEO title="Home" />
-      <Box textAlign="center">
-        <Heading>Get involved!</Heading>
 
-        <Spinner ref={spinnerRef} marginTop={200}/>
+      <Section
+        backgroundColor={"#B56AFF"}
+        paddingY={[1,8]}
+      >
+        <Heading {...headerStyling}>Hello and welcome,<br/> fellow Technologists!</Heading>
+        <Text {...textStyling}>
+          The number of people who are volunteering for this effort is fantastic, and we want to ensure this energy gets directed to the right place and optimised.
+        </Text>
+        <Text {...textStyling}>
+          So tell us what skills you have and your realistic availability, and we'll add you to the Slack group to get you started!
+        </Text>
+      </Section>
 
-        <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-        <iframe
-          title="Sign Up Form"
-          src="https://airtable.com/embed/shruuF50gMQCJFkW0?backgroundColor=blue"
-          className="airtable-embed airtable-dynamic-height"
-          frameBorder="0"
-          width="100%"
-          height="3900"
-          background="transparent"
-          onLoad={hideSpinner}
-        ></iframe>
-      </Box>
+      <Section
+        fontSize={[16, 22]}
+        maxWidth={1150}
+        paddingY={8}
+        fontWeight={500}
+      >
+        <Text paddingY={5}>
+          So you’re a:
+        </Text>
+        <List>
+          <ListItem>• Developer</ListItem>
+          <ListItem>• Data Scientist</ListItem>
+          <ListItem>• Designer</ListItem>
+          <ListItem>• Product / Project Manager</ListItem>
+          <ListItem>• Content Creator, Writer</ListItem>
+          <ListItem>• Marketing / PR / Marketplace Specialist</ListItem>
+        </List>
+        <Text>etc!</Text>
+        <Text paddingY={5}>...and you want to help in the Covid19 crisis?</Text>
+        <Text>This is what you can find here:</Text>
+        <List>
+          <ListItem>• Offer your skills to existing projects by code4covid group</ListItem>
+          <ListItem>• Ask for tech resources for your project to code4covid group</ListItem>
+          <ListItem>• Check the Coronavirus Tech Handbook by TechForUK group</ListItem>
+          <ListItem>• Explore List Of Existing Tech Communities</ListItem>
+        </List>
+
+        <Link to="/get-involved/">
+          <Button {...buttonStyling}>CLICK TO START!</Button>
+        </Link>
+      </Section>
     </Layout>
   )
 };
 
-export default TechVolunteerLanding
+export default TechVolunteers
