@@ -26,7 +26,9 @@ const IndexPage = () => (
       paddingY={[1,8]}
     >
       <Heading {...headerStyling}>Need help in Quarantine?</Heading>
-      <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
+      <Link to="/support-resources/">
+        <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
+      </Link>
       <Heading {...headerStyling}>
         Be part of the #code4covid Tech Response team
       </Heading>
