@@ -69,7 +69,7 @@ const TechVolunteers = () => {
           <ListItem>• Explore List Of Existing Tech Communities</ListItem>
         </List>
 
-        <Link to="/get-involved/">
+        <Link to="/tech-volunteers-form/">
           <Button {...buttonStyling}>CLICK TO START!</Button>
         </Link>
       </Section>
