@@ -7,6 +7,9 @@ export default {
     body: "Montserrat, sans-serif",
     heading: "Montserrat, sans-serif",
   },
+  fontSizes: {
+    ...theme.fontSizes,
+  },
   colors: {
     ...theme.colors,
     black: "#2F3B45",

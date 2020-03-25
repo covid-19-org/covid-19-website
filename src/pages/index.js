@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button, Heading, Box } from "@chakra-ui/core"
+import { Button, Heading, Box, Text } from "@chakra-ui/core"
 import { Link } from "gatsby"
 
 const headerStyling = {
@@ -19,10 +19,12 @@ const buttonStyling = {
 }
 
 const IndexPage = () => (
-  <Layout mainStyle={{backgroundColor: "#B56AFF"}}>
+  <Layout>
     <SEO title="Home" />
     <Box
-      maxWidth={1300}
+      as="section"
+      backgroundColor={"#B56AFF"}
+      paddingX={["1rem", "4rem"]}
       paddingY={8}
     >
       <Heading {...headerStyling}>Need help in Quarantine?</Heading>
@@ -33,6 +35,18 @@ const IndexPage = () => (
       <Link to="/tech-landing/">
         <Button style={buttonStyling}>VOLUNTEER</Button>
       </Link>
+    </Box>
+    <Box
+      as="section"
+      fontSize={24}
+      maxWidth={800}
+      paddingX={["1rem", "4rem"]}
+      paddingY={8}
+    >
+      <Heading paddingBottom={6}>Who we are</Heading>
+      <Text>
+        We are a team of helpers to help...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae enim mi. Etiam eget mi mi. In rhoncus nibh dolor, vel pulvinar ipsum pharetra eget. Aenean diam dolor, ullamcorper vitae dolor sit amet, convallis faucibus est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed euismod tortor sed suscipit aliquam. Curabitur sollicitudin lorem non nisl bibendum, nec iaculis metus bibendum.
+      </Text>
     </Box>
   </Layout>
 )
