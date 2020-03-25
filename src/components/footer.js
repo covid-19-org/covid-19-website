@@ -20,10 +20,10 @@ const Footer = () => (
       </Heading>
       <List textDecoration="underline" lineHeight={2}>
         <ListItem>
-          <Link to="/support_resources">Support Resources</Link>
+          <Link to="/support-resources">Support Resources</Link>
         </ListItem>
         <ListItem>
-          <Link to="/volunteer">Volunteer</Link>
+          <Link to="/tech-landing">Volunteer</Link>
         </ListItem>
       </List>
     </Box>
