@@ -25,7 +25,7 @@ const PAGES = [
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" size="md" as={Link} color="black" {...props} />
+  <Button variant="ghost" size="md" as={Link} color="black" fontWeight={500} {...props} />
 )
 
 const Header = () => {
@@ -62,7 +62,7 @@ const Header = () => {
         spacing={1}
       >
         {PAGES.map(page => (
-          <NavLink key={page.children + page.to} {...page} />
+          <NavLink key={page.children + page.to} fontWeight={700} {...page} />
         ))}
       </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -79,7 +79,7 @@ const Header = () => {
                     color="white"
                     css={css`
                       [aria-current]& {
-                        font-weight: 800;
+                        font-weight: 700;
                       }
                     `}
                     {...page}
