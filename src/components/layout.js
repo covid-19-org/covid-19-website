@@ -10,9 +10,15 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Main from "./main"
 import Footer from "./footer"
+import { Box } from "@chakra-ui/core"
 
-const Layout = ({ children }) => {
+const styles = {
+  paddingX: 5,
+}
+
+const Layout = ({ children, mainStyle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,14 +32,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          background: "#B56AFF",
-        }}
-      >
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <Main style={mainStyle}>{children}</Main>
+      <Footer />
     </>
   )
 }

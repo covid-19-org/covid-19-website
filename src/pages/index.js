@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button, Heading } from "@chakra-ui/core"
+import { Button, Heading, Box } from "@chakra-ui/core"
 import { Link } from "gatsby"
 
 const headerStyling = {
@@ -13,18 +13,16 @@ const headerStyling = {
 
 const buttonStyling = {
   backgroundColor: "#FFEE56",
+  color: "black",
   margin: "40px 0px",
 }
 
 const IndexPage = () => (
-  <Layout>
+  <Layout mainStyle={{backgroundColor: "#B56AFF"}}>
     <SEO title="Home" />
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1300,
-        padding: "1.45rem 1.0875rem",
-      }}
+    <Box
+      maxWidth={1300}
+      paddingY={8}
     >
       <Heading {...headerStyling}>Need help in Quarantine?</Heading>
       <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
@@ -34,7 +32,7 @@ const IndexPage = () => (
       <Link to="/tech-landing/">
         <Button style={buttonStyling}>VOLUNTEER</Button>
       </Link>
-    </div>
+    </Box>
   </Layout>
 )
 
