@@ -9,19 +9,18 @@ import Section from "../components/section"
 const headerStyling = {
   color: "white",
   fontSize: ["32px", "48px", "64px", "64px", "84px"],
-  maxWidth: "1400px",
   fontWeight: "bold",
-  marginTop: [5,10],
-  paddingBottom: 20,
+  marginTop: [5, 5, 10],
+  paddingBottom: [5, 5, 20],
 }
 
 const buttonStyling = {
   backgroundColor: "#FFEE56",
-  margin: "80px 0px 40px",
+  marginY: 10,
 }
 
 const textStyling = {
-  fontSize: "35px",
+  fontSize: ["20px", "20px", "35px"],
   paddingY: 5,
   color: "white",
   fontWeight: "bold",
@@ -46,10 +45,8 @@ const TechVolunteers = () => {
       </Section>
 
       <Section
-        fontSize={[16, 22]}
-        maxWidth={1150}
-        paddingY={8}
-        fontWeight={500}
+        fontSize={[16, 16, 24]}
+        paddingY={[1,8]}
       >
         <Text paddingY={5}>
           So you’re a:
@@ -63,7 +60,7 @@ const TechVolunteers = () => {
           <ListItem>• Marketing / PR / Marketplace Specialist</ListItem>
         </List>
         <Text>etc!</Text>
-        <Text paddingY={5}>...and you want to help in the Covid19 crisis?</Text>
+        <Text paddingY={[5]}>...and you want to help in the Covid19 crisis?</Text>
         <Text>This is what you can find here:</Text>
         <List>
           <ListItem>• Offer your skills to existing projects by code4covid group</ListItem>
