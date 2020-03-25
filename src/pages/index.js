@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button, Heading, Box, Text } from "@chakra-ui/core"
+import { Button, Heading, Text } from "@chakra-ui/core"
 import { Link } from "gatsby"
 import Section from "../components/section"
 
 const headerStyling = {
   color: "white",
-  fontSize: ["36px", "48px", "84px"],
+  fontSize: ["36px", "48px", "64px", "64px", "84px"],
   maxWidth: "847px",
   fontWeight: "bold",
   marginTop: [5,10],
