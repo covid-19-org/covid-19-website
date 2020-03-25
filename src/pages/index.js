@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 const headerStyling = {
   color: "white",
-  fontSize: ["36px", "84px"],
+  fontSize: ["36px", "48px", "84px"],
   maxWidth: "847px",
   fontWeight: "bold",
   marginTop: "40px"
