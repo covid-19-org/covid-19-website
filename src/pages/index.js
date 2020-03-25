@@ -8,6 +8,7 @@ const headerStyling = {
   color: "white",
   fontSize: ["36px", "84px"],
   maxWidth: "847px",
+  fontWeight: "bold",
 }
 
 const buttonStyling = {

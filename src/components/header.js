@@ -25,7 +25,7 @@ const PAGES = [
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" size="md" as={Link} color="#2F3B45" {...props} />
+  <Button variant="ghost" size="md" as={Link} {...props} />
 )
 
 const Header = () => {
@@ -59,7 +59,6 @@ const Header = () => {
           aria-label="Navigation Button"
           icon="menu"
           onClick={onOpen}
-          minWidth={0}
         />
         <Stack
           display={["none", "none", "block"]}
