@@ -1,9 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { Box, Image, Flex, Heading, ListItem, List } from '@chakra-ui/core';
+import { Box, Image, Flex, Heading, ListItem, List, Link as InlineLink } from '@chakra-ui/core';
 import { Link } from "gatsby";
 
 import code4coviddark from "../images/code4coviddark.svg"
+import twitterIcon from "../images/twitter-icon.svg"
 
 const Footer = () => (
   <Flex
@@ -24,6 +25,18 @@ const Footer = () => (
         </ListItem>
         <ListItem>
           <Link to="/tech-volunteers">Tech Volunteers</Link>
+        </ListItem>
+        <ListItem>
+          <InlineLink href="https://twitter.com/code4covid" isExternal>
+              <Image
+                src={twitterIcon}
+                alt="Twitter Icon"
+                display="inline-block"
+                marginRight="0.5rem"
+                width="25px"
+              />
+            Twitter
+          </InlineLink>
         </ListItem>
       </List>
     </Box>
