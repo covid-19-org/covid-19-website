@@ -18,10 +18,10 @@ const TechVolunteersForm = () => {
         <iframe
           title="Sign Up Form"
           src="https://airtable.com/embed/shrijsXl5oUozCq0p?backgroundColor=blue"
-          class="airtable-embed airtable-dynamic-height"
-          frameborder="0"
+          className="airtable-embed airtable-dynamic-height"
+          frameBorder="0"
           width="100%"
-          height="1800"
+          height="1940"
           background="transparent"
           onLoad={hideSpinner}
         ></iframe>
