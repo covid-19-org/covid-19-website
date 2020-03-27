@@ -10,14 +10,13 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
-  Image,
   useDisclosure,
   css,
   Link,
 } from "@chakra-ui/core"
 import React from "react"
-import code4covid from "../images/code4covid.svg"
-import twitterIcon from "../images/twitter-icon.svg";
+import Code4Covid from "../images/code4covid.svg"
+import TwitterIcon from "../images/twitter-icon.svg";
 import { Link as GatsbyLink } from "gatsby"
 
 const PAGES = [
@@ -43,11 +42,7 @@ const Header = () => {
       alignItems="center"
     >
       <Link to="/">
-        <Image
-          src={code4covid}
-          alt="code4covidLogo"
-          width={[125, 200]}
-        />
+        <Code4Covid width={200}/>
       </Link>
       <IconButton
         display={["block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
@@ -77,14 +72,8 @@ const Header = () => {
             {...page}
           />
         ))}
-        <Link href="https://twitter.com/code4covid" isExternal>
-          <Image
-            src={twitterIcon}
-            alt="Twitter link"
-            display="inline-block"
-            marginLeft="1rem"
-            width="25px"
-          />
+        <Link href="https://twitter.com/code4covid" name="Twitter" isExternal>
+          <TwitterIcon width="25px" style={{display: "inline"}} role="img"/>
         </Link>
       </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -108,12 +97,7 @@ const Header = () => {
                   />
                 ))}
                 <Link textAlign="center" href="https://twitter.com/code4covid" isExternal>
-                  <Image
-                    src={twitterIcon}
-                    alt="Twitter link"
-                    display="inline-block"
-                    width="40px"
-                  />
+                  <TwitterIcon width="40px" style={{ display: "inline-block" }} />
                 </Link>
               </Stack>
             </DrawerBody>

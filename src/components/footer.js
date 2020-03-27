@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { Box, Image, Flex, Heading, ListItem, List, Link as InlineLink } from '@chakra-ui/core';
-import { Link } from "gatsby";
+import { Box, Flex, Heading, ListItem, List, Link } from '@chakra-ui/core';
+import { Link as GatsbyLink } from "gatsby";
 
-import code4coviddark from "../images/code4coviddark.svg"
-import twitterIcon from "../images/twitter-icon.svg"
+import Code4CovidDark from "../images/code4coviddark.svg"
+import TwitterIcon from "../images/twitter-icon.svg"
 
 const Footer = () => (
   <Flex
@@ -21,31 +21,21 @@ const Footer = () => (
       </Heading>
       <List textDecoration="underline" lineHeight={2}>
         <ListItem>
-          <Link to="/support-resources">Support Resources</Link>
+          <GatsbyLink to="/support-resources">Support Resources</GatsbyLink>
         </ListItem>
         <ListItem>
-          <Link to="/tech-volunteers">Tech Volunteers</Link>
+          <GatsbyLink to="/tech-volunteers">Tech Volunteers</GatsbyLink>
         </ListItem>
         <ListItem>
-          <InlineLink href="https://twitter.com/code4covid" isExternal>
-              <Image
-                src={twitterIcon}
-                alt="Twitter Icon"
-                display="inline-block"
-                marginRight="0.5rem"
-                width="25px"
-              />
-            Twitter
-          </InlineLink>
+          <Link href="https://twitter.com/code4covid" isExternal>
+            <TwitterIcon width={25} style={{ display: "inline" }} />
+            <Box as="span" marginLeft="10px">Twitter</Box>
+          </Link>
         </ListItem>
       </List>
     </Box>
     <Flex alignSelf="flex-end">
-      <Image
-        src={code4coviddark}
-        alt="code4covidLogo"
-        width={[125, 200]}
-      />
+      <Code4CovidDark width={150} />
     </Flex>
   </Flex>
 )

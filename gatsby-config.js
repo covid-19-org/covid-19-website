@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Code 4 Covid`,
+    title: `Code4Covid`,
     description: `Help fight Covid-19 with the tech community`,
-    author: `@gatsbyjs`,
+    author: `@code4covid`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,6 +46,14 @@ module.exports = {
         trackingId: "UA-162006761-1",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

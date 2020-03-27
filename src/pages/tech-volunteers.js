@@ -29,7 +29,7 @@ const textStyling = {
 const TechVolunteers = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Tech Volunteers" />
 
       <Section
         backgroundColor={"purple"}
