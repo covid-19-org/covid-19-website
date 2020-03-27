@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button, Heading, Text, List, ListItem, Link as InlineLink } from "@chakra-ui/core"
-import { Link } from "gatsby"
+import { Button, Heading, Text, List, ListItem, Link } from "@chakra-ui/core"
+import { Link as GatsbyLink } from "gatsby"
 import Section from "../components/section"
 
 const headerStyling = {
@@ -26,15 +26,15 @@ const IndexPage = () => (
       paddingY={[1,8]}
     >
       <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
-      <Link to="/support-resources/">
+      <GatsbyLink to="/support-resources/">
         <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
-      </Link>
+      </GatsbyLink>
       <Heading {...headerStyling}>
         Be part of the <i>#code4covid</i> Tech Response team
       </Heading>
-      <Link to="/tech-volunteers/">
+      <GatsbyLink to="/tech-volunteers/">
         <Button style={buttonStyling}>TECH VOLUNTEERS</Button>
-      </Link>
+      </GatsbyLink>
     </Section>
 
     <Section
@@ -60,19 +60,19 @@ const IndexPage = () => (
       <br />
       <List styleType="disc">
         <ListItem>
-          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://coronavirustechhandbook.com" isExternal>coronavirustechhandbook.com</InlineLink> - COVID-19 Tech Response's library of resources
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://coronavirustechhandbook.com" isExternal>coronavirustechhandbook.com</Link> - COVID-19 Tech Response's library of resources
         </ListItem>
         <ListItem>
-          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covidmutualaid.org" isExternal>covidmutualaid.org</InlineLink> - A direct line into local community efforts
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covidmutualaid.org" isExternal>covidmutualaid.org</Link> - A direct line into local community efforts
         </ListItem>
         <ListItem>
-          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://TechForUK.com/join" isExternal>TechForUK</InlineLink> - Slack group for collecting volunteers and open discussion
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://TechForUK.com/join" isExternal>TechForUK</Link> - Slack group for collecting volunteers and open discussion
         </ListItem>
         <ListItem>
-          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covid19-response.com" isExternal>covid19-response.com</InlineLink> - Moderated scientific 'request for ideas'
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covid19-response.com" isExternal>covid19-response.com</Link> - Moderated scientific 'request for ideas'
         </ListItem>
         <ListItem>
-          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://helpwithcovid.com" isExternal>helpwithcovid.com</InlineLink> - International volunteer sign ups and ideas board
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://helpwithcovid.com" isExternal>helpwithcovid.com</Link> - International volunteer sign ups and ideas board
         </ListItem>
       </List>
     </Section>
