@@ -66,7 +66,7 @@ const IndexPage = () => (
           <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covidmutualaid.org" isExternal>covidmutualaid.org</Link> - A direct line into local community efforts
         </ListItem>
         <ListItem>
-          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://TechForUK.com/join" isExternal>TechForUK</Link> - Slack group for collecting volunteers and open discussion
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://techforuk.com" isExternal>https://techforuk.com</Link> - Slack group for collecting volunteers and open discussion
         </ListItem>
         <ListItem>
           <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covid19-response.com" isExternal>covid19-response.com</Link> - Moderated scientific 'request for ideas'
