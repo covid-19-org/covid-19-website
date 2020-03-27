@@ -72,9 +72,16 @@ const Header = () => {
             {...page}
           />
         ))}
-        <Link href="https://twitter.com/code4covid" name="Twitter" isExternal>
-          <TwitterIcon width="25px" style={{display: "inline"}} role="img"/>
-        </Link>
+        <Button
+          as={Link}
+          variant="ghost"
+          _hover={{}}
+          target="blank"
+          href="https://twitter.com/code4covid"
+          name="Twitter"
+        >
+          <TwitterIcon width={25} height={25} style={{ display: "inline-block" }} role="img"/>
+        </Button>
       </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
