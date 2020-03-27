@@ -25,7 +25,7 @@ const IndexPage = () => (
       backgroundColor={"purple"}
       paddingY={[1,8]}
     >
-      <Heading {...headerStyling}>Need help in <br/> Quarantine?</Heading>
+      <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
       <Link to="/support-resources/">
         <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
       </Link>
