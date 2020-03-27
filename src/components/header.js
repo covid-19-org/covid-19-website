@@ -10,15 +10,14 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
-  Image,
   useDisclosure,
   css,
-  Link as InlineLink,
+  Link,
 } from "@chakra-ui/core"
 import React from "react"
-import code4covid from "../images/code4covid.svg"
-import twitterIcon from "../images/twitter-icon.svg";
-import { Link } from "gatsby"
+import Code4Covid from "../images/code4covid.svg"
+import TwitterIcon from "../images/twitter-icon.svg";
+import { Link as GatsbyLink } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
@@ -27,7 +26,7 @@ const PAGES = [
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" fontSize="20px" as={Link} fontWeight={500} {...props} />
+  <Button variant="ghost" fontSize="20px" as={GatsbyLink} fontWeight={500} {...props}/>
 )
 
 const Header = () => {
@@ -43,11 +42,7 @@ const Header = () => {
       alignItems="center"
     >
       <Link to="/">
-        <Image
-          src={code4covid}
-          alt="code4covidLogo"
-          width={[125, 200]}
-        />
+        <Code4Covid width={200}/>
       </Link>
       <IconButton
         display={["block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
@@ -64,17 +59,29 @@ const Header = () => {
         spacing={1}
       >
         {PAGES.map(page => (
-          <NavLink key={page.children + page.to} fontWeight={700} color="gray.400" {...page} />
-        ))}
-        <InlineLink href="https://twitter.com/code4covid" isExternal>
-          <Image
-            src={twitterIcon}
-            alt="Twitter link"
-            display="inline-block"
-            marginLeft="1rem"
-            width="25px"
+          <NavLink
+            _hover={{ color: "gray.400" }}
+            color="gray.700"
+            fontWeight={700}
+            key={page.children + page.to}
+            css={css`
+              [aria-current]& {
+                color: #A0AEC0;
+              }
+            `}
+            {...page}
           />
-        </InlineLink>
+        ))}
+        <Button
+          as={Link}
+          variant="ghost"
+          _hover={{}}
+          target="blank"
+          href="https://twitter.com/code4covid"
+          name="Twitter"
+        >
+          <TwitterIcon width={25} height={25} style={{ display: "inline-block" }} role="img"/>
+        </Button>
       </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
@@ -96,14 +103,9 @@ const Header = () => {
                     {...page}
                   />
                 ))}
-                <InlineLink textAlign="center" href="https://twitter.com/code4covid" isExternal>
-                  <Image
-                    src={twitterIcon}
-                    alt="Twitter link"
-                    display="inline-block"
-                    width="40px"
-                  />
-                </InlineLink>
+                <Link textAlign="center" href="https://twitter.com/code4covid" isExternal>
+                  <TwitterIcon width="40px" style={{ display: "inline-block" }} />
+                </Link>
               </Stack>
             </DrawerBody>
           </DrawerContent>

@@ -10,7 +10,7 @@ const TechVolunteersForm = () => {
 
   return (
   <Layout>
-      <SEO title="Home" />
+      <SEO title="Tech Volunteers Form" />
       <Box textAlign="center">
         <Spinner ref={spinnerRef} marginTop={200}/>
 

@@ -7,6 +7,15 @@ export default {
     body: "Montserrat, sans-serif",
     heading: "Montserrat, sans-serif",
   },
+  colors: {
+    ...theme.colors,
+    gray: {
+      ...theme.colors.gray,
+      700: "#2F3B45",
+    },
+    purple: "#B56AFF",
+    yellow: "#FFEE56",
+  },
   icons: {
     ...theme.icons,
     menu: {
