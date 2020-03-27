@@ -30,7 +30,7 @@ const IndexPage = () => (
         <Button {...buttonStyling}>GET TECH SUPPORT</Button>
       </Link>
       <Heading {...headerStyling}>
-        Be part of the <i>#code4covid</i> Tech Response team
+        Tech Volunteer? Join the <i>#code4covid</i> Community
       </Heading>
       <GatsbyLink to="/tech-volunteers/">
         <Button style={buttonStyling}>TECH VOLUNTEERS</Button>
