@@ -13,9 +13,11 @@ import {
   Image,
   useDisclosure,
   css,
+  Link as InlineLink,
 } from "@chakra-ui/core"
 import React from "react"
 import code4covid from "../images/code4covid.svg"
+import twitterIcon from "../images/twitter-icon.svg";
 import { Link } from "gatsby"
 
 const PAGES = [
@@ -64,6 +66,15 @@ const Header = () => {
         {PAGES.map(page => (
           <NavLink key={page.children + page.to} fontWeight={700} color="gray.400" {...page} />
         ))}
+        <InlineLink href="https://twitter.com/code4covid" isExternal>
+          <Image
+            src={twitterIcon}
+            alt="Twitter link"
+            display="inline-block"
+            marginLeft="1rem"
+            width="25px"
+          />
+        </InlineLink>
       </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
@@ -85,6 +96,14 @@ const Header = () => {
                     {...page}
                   />
                 ))}
+                <InlineLink textAlign="center" href="https://twitter.com/code4covid" isExternal>
+                  <Image
+                    src={twitterIcon}
+                    alt="Twitter link"
+                    display="inline-block"
+                    width="40px"
+                  />
+                </InlineLink>
               </Stack>
             </DrawerBody>
           </DrawerContent>
