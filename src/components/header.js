@@ -41,9 +41,9 @@ const Header = () => {
       justifyContent="space-between"
       alignItems="center"
     >
-      <Link to="/">
+      <GatsbyLink to="/">
         <Code4Covid width={200}/>
-      </Link>
+      </GatsbyLink>
       <IconButton
         display={["block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
         variant="ghost"
