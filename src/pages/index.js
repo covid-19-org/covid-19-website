@@ -60,19 +60,19 @@ const IndexPage = () => (
       <br />
       <List styleType="disc">
         <ListItem>
-          <InlineLink href="https://coronavirustechhandbook.com" isExternal>coronavirustechhandbook.com</InlineLink> - COVID-19 Tech Response's library of resources
+          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://coronavirustechhandbook.com" isExternal>coronavirustechhandbook.com</InlineLink> - COVID-19 Tech Response's library of resources
         </ListItem>
         <ListItem>
-          <InlineLink href="https://covidmutualaid.org" isExternal>covidmutualaid.org</InlineLink> - A direct line into local community efforts
+          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covidmutualaid.org" isExternal>covidmutualaid.org</InlineLink> - A direct line into local community efforts
         </ListItem>
         <ListItem>
-          <InlineLink href="https://TechForUK.com/join" isExternal>TechForUK</InlineLink> - Slack group for collecting volunteers and open discussion
+          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://TechForUK.com/join" isExternal>TechForUK</InlineLink> - Slack group for collecting volunteers and open discussion
         </ListItem>
         <ListItem>
-          <InlineLink href="https://covid19-response.com" isExternal>covid19-response.com</InlineLink> - Moderated scientific 'request for ideas'
+          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covid19-response.com" isExternal>covid19-response.com</InlineLink> - Moderated scientific 'request for ideas'
         </ListItem>
         <ListItem>
-          <InlineLink href="https://helpwithcovid.com" isExternal>helpwithcovid.com</InlineLink> - International volunteer sign ups and ideas board
+          <InlineLink textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://helpwithcovid.com" isExternal>helpwithcovid.com</InlineLink> - International volunteer sign ups and ideas board
         </ListItem>
       </List>
     </Section>
