@@ -7,7 +7,7 @@ import Section from "../components/section"
 
 const headerStyling = {
   color: "white",
-  fontSize: ["36px", "48px", "64px", "64px", "84px"],
+  fontSize: ["32px", "48px", "64px", "64px", "84px"],
   maxWidth: "1400px",
   fontWeight: "bold",
   marginTop: [5,10],
@@ -39,7 +39,6 @@ const IndexPage = () => (
 
     <Section
       fontSize={[16, 24]}
-      maxWidth={1150}
       paddingY={8}
     >
       <Heading paddingBottom={6}>Who we are</Heading>
