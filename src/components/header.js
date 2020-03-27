@@ -13,12 +13,12 @@ import {
   Image,
   useDisclosure,
   css,
-  Link as InlineLink,
+  Link,
 } from "@chakra-ui/core"
 import React from "react"
 import code4covid from "../images/code4covid.svg"
 import twitterIcon from "../images/twitter-icon.svg";
-import { Link } from "gatsby"
+import { Link as GatsbyLink } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
@@ -27,7 +27,7 @@ const PAGES = [
 ]
 
 const NavLink = props => (
-  <Button variant="ghost" fontSize="20px" as={Link} fontWeight={500} {...props} />
+  <Button variant="ghost" fontSize="20px" as={GatsbyLink} fontWeight={500} {...props}/>
 )
 
 const Header = () => {
@@ -65,14 +65,19 @@ const Header = () => {
       >
         {PAGES.map(page => (
           <NavLink
+            _hover={{ color: "gray.400" }}
             color="gray.700"
             fontWeight={700}
-            _hover={{ color: "gray.400" }}
             key={page.children + page.to}
+            css={css`
+              [aria-current]& {
+                color: #A0AEC0;
+              }
+            `}
             {...page}
           />
         ))}
-        <InlineLink href="https://twitter.com/code4covid" isExternal>
+        <Link href="https://twitter.com/code4covid" isExternal>
           <Image
             src={twitterIcon}
             alt="Twitter link"
@@ -80,7 +85,7 @@ const Header = () => {
             marginLeft="1rem"
             width="25px"
           />
-        </InlineLink>
+        </Link>
       </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
@@ -102,14 +107,14 @@ const Header = () => {
                     {...page}
                   />
                 ))}
-                <InlineLink textAlign="center" href="https://twitter.com/code4covid" isExternal>
+                <Link textAlign="center" href="https://twitter.com/code4covid" isExternal>
                   <Image
                     src={twitterIcon}
                     alt="Twitter link"
                     display="inline-block"
                     width="40px"
                   />
-                </InlineLink>
+                </Link>
               </Stack>
             </DrawerBody>
           </DrawerContent>
