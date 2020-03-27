@@ -9,7 +9,7 @@ import twitterIcon from "../images/twitter-icon.svg"
 const Footer = () => (
   <Flex
     as="footer"
-    backgroundColor="#2F3B45"
+    backgroundColor="gray.700"
     paddingX={["1rem", "4.5rem"]}
     paddingY={"2rem"}
     justifyContent="space-between"

@@ -64,7 +64,13 @@ const Header = () => {
         spacing={1}
       >
         {PAGES.map(page => (
-          <NavLink key={page.children + page.to} fontWeight={700} color="gray.400" {...page} />
+          <NavLink
+            color="gray.700"
+            fontWeight={700}
+            _hover={{ color: "gray.400" }}
+            key={page.children + page.to}
+            {...page}
+          />
         ))}
         <InlineLink href="https://twitter.com/code4covid" isExternal>
           <Image

@@ -15,7 +15,7 @@ const headerStyling = {
 }
 
 const buttonStyling = {
-  backgroundColor: "#FFEE56",
+  backgroundColor: "yellow",
   marginY: 10,
 }
 
@@ -32,7 +32,7 @@ const TechVolunteers = () => {
       <SEO title="Home" />
 
       <Section
-        backgroundColor={"#B56AFF"}
+        backgroundColor={"purple"}
         paddingY={[1,8]}
       >
         <Heading {...headerStyling}>Hello and welcome,<br/> fellow Technologists!</Heading>

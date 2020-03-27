@@ -14,7 +14,7 @@ const headerStyling = {
 }
 
 const buttonStyling = {
-  backgroundColor: "#FFEE56",
+  backgroundColor: "yellow",
   margin: "40px 0px",
 }
 
@@ -22,7 +22,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Section
-      backgroundColor={"#B56AFF"}
+      backgroundColor={"purple"}
       paddingY={[1,8]}
     >
       <Heading {...headerStyling}>Need help in <br/> Quarantine?</Heading>
