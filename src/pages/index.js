@@ -27,7 +27,7 @@ const IndexPage = () => (
     >
       <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
       <Link href="https://covidtechsupport.com/about/" isExternal>
-        <Button {...buttonStyling}>SUPPORT RESOURCES</Button>
+        <Button {...buttonStyling}>GET TECH SUPPORT</Button>
       </Link>
       <Heading {...headerStyling}>
         Be part of the <i>#code4covid</i> Tech Response team
