@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/core'
 const Section = (props) => (
   <Box
     as="section"
+    margin="auto"
     paddingX={["1rem", "4.5rem"]}
     {...props}
   >

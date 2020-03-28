@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/volunteer",
+            "lambdaFunction": "covid19website391de842",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "apid510b2bc",
+    "apiName": "apid510b2bc",
+    "functionArns": [
+        {
+            "lambdaFunction": "covid19website391de842"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-covid-19-website-develop-153929-authRole",
+        "unAuthRoleName": "amplify-covid-19-website-develop-153929-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "covid19website391de842",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
