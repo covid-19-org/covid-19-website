@@ -21,7 +21,7 @@ const formControlProps = {
 }
 
 const TechVolunteersForm = () => {
-  const [didSubmit, setDidSubmit] = useState(false);
+  const [result, setResult] = useState({});
 
   const submitForm = (values, actions) => {
     const body = {
@@ -29,37 +29,45 @@ const TechVolunteersForm = () => {
       fullName: values.fullName,
     }
 
-    API.post(apiName, path, { body }).then(response => {
+    API.post(apiName, path, { body }).then(() => {
       actions.setSubmitting(false);
-      setDidSubmit(true);
-    });
+      setResult({
+        status: "success",
+        title: "Application submitted!",
+        description: "Thank you for your interest. We will be in touch soon.",
+      })
+    }).catch(() => {
+      setResult({
+        status: "error",
+        title: "Submission Failed",
+        description: "Sorry, something went wrong. Please try again soon."
+      });
+    })
   };
 
   return (
     <Layout>
       <SEO title="Tech Volunteers Form" />
 
-      <Section maxWidth={600} paddingBottom={50}>
-        <Heading paddingBottom={10} size="lg" textAlign="center">Tech Volunteers Form</Heading>
+      <Section maxWidth={600}>
+        <Heading marginBottom={10} size="lg" textAlign="center">Tech Volunteers Form</Heading>
 
-        {didSubmit ?
+        {result.status &&
           <Alert
-            status="success"
+            status={result.status}
             variant="subtle"
             flexDirection="column"
             justifyContent="center"
             textAlign="center"
             height="200px"
+            marginBottom={10}
           >
             <AlertIcon size="40px" mr={0} />
-            <AlertTitle mt={4} mb={1} fontSize="lg">
-              Application submitted!
-            </AlertTitle>
-            <AlertDescription maxWidth="sm">
-              Thank you for your interest. We will be in touch soon.
-            </AlertDescription>
-          </Alert> :
+            <AlertTitle mt={4} mb={1} fontSize="lg">{result.title}</AlertTitle>
+            <AlertDescription maxWidth="sm">{result.description}</AlertDescription>
+          </Alert>}
 
+        {result.status === "success" ||
           <Formik onSubmit={submitForm} initialValues={{ fullName: '', email: '' }}>
             {props => (
               <form onSubmit={props.handleSubmit}>
@@ -87,6 +95,7 @@ const TechVolunteersForm = () => {
                   variantColor="blue"
                   isLoading={props.isSubmitting}
                   type="submit"
+                  marginBottom={10}
                 >
                   Submit
                 </Button>
