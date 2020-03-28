@@ -18,7 +18,7 @@ cd covid-19-website/
 npm install
 gatsby develop
 ```
-For a given task, create a pull request from your fork including if necessary a link to the preview on AWS Amplify plus any additional comments to describe/explain the change (good, atomic commit messages should usually be enough). ([Example]())
+For a given task, create a feature branch to work on the changes and then create a pull request from your fork including if necessary a link to the preview on AWS Amplify plus any additional comments to describe/explain the change (good, atomic commit messages should usually be enough). ([Example]())
 
 Tasks will be coordinated on the `#project-main_website` channel on Slack and our project board here: [Trello/GitHub link here]()
 
