@@ -23,7 +23,7 @@ module.exports = ({ SES, event }) => {
       Source: 'noreply@code4covid.org'
     };
 
-    const sendEmailPromise = new SES().sendEmail(params);
+    const sendEmailPromise = new SES().sendEmail(params).promise();
 
     return sendEmailPromise.then((data) => {
       console.log(data.MessageId);

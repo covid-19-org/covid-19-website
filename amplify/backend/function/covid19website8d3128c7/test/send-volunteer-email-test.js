@@ -23,7 +23,7 @@ describe('send-volunteer-email', function() {
     let fakeSES, sendEmailFake;
 
     beforeEach(() => {
-      sendEmailFake = sinon.fake.resolves({ MessageId: 'x' });
+      sendEmailFake = sinon.fake.returns({ promise: sinon.fake.resolves({ MessageId: 'x' }) });
 
       fakeSES = function() {
         this.sendEmail = sendEmailFake;
