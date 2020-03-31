@@ -70,12 +70,12 @@ describe('send-volunteer-email', function() {
               "Body": {
                 "Text": {
                   "Charset": "UTF-8",
-                  "Data": "TEXT_FORMAT_BODY"
+                  "Data": "Name: Joe Bloggs\nEmail: joe@bloggs.com"
                 }
               },
               "Subject": {
                 "Charset": "UTF-8",
-                "Data": "Test Email"
+                "Data": "code4covid - New Volunteer"
               }
             },
             "Source": "noreply@code4covid.org",

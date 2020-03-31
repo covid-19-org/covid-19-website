@@ -4,6 +4,8 @@ module.exports = ({ AWS, event }) => {
     console.log(record.eventName);
     console.log('DynamoDB Record: %j', record.dynamodb);
 
+    const { fullName, email } = record.dynamodb.NewImage;
+
     const params = {
       Destination: {
         ToAddresses: ['hello@keithbro.com'],
@@ -12,12 +14,12 @@ module.exports = ({ AWS, event }) => {
         Body: {
           Text: {
             Charset: "UTF-8",
-            Data: "TEXT_FORMAT_BODY",
+            Data: `Name: ${fullName.S}\nEmail: ${email.S}`,
           }
         },
         Subject: {
           Charset: "UTF-8",
-          Data: 'Test Email'
+          Data: "code4covid - New Volunteer"
         },
       },
       Source: 'noreply@code4covid.org'
