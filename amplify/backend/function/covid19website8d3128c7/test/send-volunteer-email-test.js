@@ -20,19 +20,32 @@ let record = {
 
 describe('send-volunteer-email', function() {
   describe('#sendVolunteerEmail()', function() {
-    let fakeSES, sendEmailFake;
+    let fakeAWS, sendEmailFake, updateFake;
 
     beforeEach(() => {
       sendEmailFake = sinon.fake.returns({ promise: sinon.fake.resolves({ MessageId: 'x' }) });
+      updateFake = sinon.fake.returns();
 
-      fakeSES = function() {
-        this.sendEmail = sendEmailFake;
+      fakeAWS = {
+        config: { update: updateFake },
+        SES: function() {
+          this.sendEmail = sendEmailFake;
+        },
       };
     });
 
+    it('configures the eu-west-1 region', () => {
+      const returnValue = sendVolunteerEmail({
+        AWS: fakeAWS,
+        event: { Records: [record] },
+      });
+
+      expect(fakeAWS.config.update.args).to.deep.equal([[{region: 'eu-west-1'}]])
+    })
+
     it('returns undefined', () => {
       const returnValue = sendVolunteerEmail({
-        SES: fakeSES,
+        AWS: fakeAWS,
         event: { Records: [record] },
       });
 
@@ -41,7 +54,7 @@ describe('send-volunteer-email', function() {
 
     it('sends the email with the correct info', () => {
       sendVolunteerEmail({
-        SES: fakeSES,
+        AWS: fakeAWS,
         event: { Records: [record] },
       });
 

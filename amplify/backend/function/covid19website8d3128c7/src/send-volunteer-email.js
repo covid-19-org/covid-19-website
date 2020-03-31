@@ -1,4 +1,4 @@
-module.exports = ({ SES, event }) => {
+module.exports = ({ AWS, event }) => {
   event.Records.forEach(record => {
     console.log(record.eventID);
     console.log(record.eventName);
@@ -23,7 +23,8 @@ module.exports = ({ SES, event }) => {
       Source: 'noreply@code4covid.org'
     };
 
-    const sendEmailPromise = new SES().sendEmail(params).promise();
+    AWS.config.update({region: 'eu-west-1'});
+    const sendEmailPromise = new AWS.SES().sendEmail(params).promise();
 
     return sendEmailPromise.then((data) => {
       console.log(data.MessageId);
