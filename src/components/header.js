@@ -23,6 +23,7 @@ const PAGES = [
   { children: "Home", to: "/" },
   { children: "Support Resources", to: "/support-resources/" },
   { children: "Tech Volunteers!", to: "/tech-volunteers/" },
+  { children: "Partner with Us!", to: "/partner-with-us/" },
 ]
 
 const NavLink = props => (
