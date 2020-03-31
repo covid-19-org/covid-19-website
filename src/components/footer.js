@@ -27,6 +27,9 @@ const Footer = () => (
           <GatsbyLink to="/tech-volunteers">Tech Volunteers</GatsbyLink>
         </ListItem>
         <ListItem>
+          <GatsbyLink to="/partner-with-us">Partner with Us</GatsbyLink>
+        </ListItem>
+        <ListItem>
           <Link href="https://twitter.com/code4covid" isExternal>
             <TwitterIcon width={25} style={{ display: "inline" }} />
             <Box as="span" marginLeft="10px">Twitter</Box>
