@@ -43,7 +43,7 @@ const IndexPage = () => (
     >
       <Heading paddingBottom={6}>Who we are</Heading>
       <Text>
-        Formed as a Slack group on March 16th by a couple of ex-colleagues, the <strong>code4covid</strong> community now counts over 400 tech volunteers: and with other groups joining in, it keeps growing!
+        Formed as a Slack group on March 16th by a couple of ex-colleagues, the <strong>code4covid</strong> community now counts over 700 tech volunteers: and with other groups joining in, it keeps growing!
       </Text>
       <br />
       <Text>
