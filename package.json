@@ -47,7 +47,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "mocha \"./{,!(node_modules)/**/}test/*-test.js\""
+    "test": "mocha \"./{,!(node_modules)/**/}backend/**/test/*-test.js\""
   },
   "repository": {
     "type": "git",

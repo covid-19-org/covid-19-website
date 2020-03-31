@@ -59,13 +59,13 @@ describe('send-volunteer-email', function() {
                   "Charset": "UTF-8",
                   "Data": "TEXT_FORMAT_BODY"
                 }
+              },
+              "Subject": {
+                "Charset": "UTF-8",
+                "Data": "Test Email"
               }
             },
             "Source": "noreply@code4covid.org",
-            "Subject": {
-              "Charset": "UTF-8",
-              "Data": "Test Email"
-            }
           }
         ]
       ]);
