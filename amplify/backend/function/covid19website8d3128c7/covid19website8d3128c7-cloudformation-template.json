@@ -67,7 +67,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-covid-19-website-develop-153929-deployment",
-					"S3Key": "amplify-builds/covid19website8d3128c7-59763239536b61343641-build.zip"
+					"S3Key": "amplify-builds/covid19website8d3128c7-43524c47466e5244582b-build.zip"
 				}
 			}
 		},
@@ -139,6 +139,25 @@
 										"region": {
 											"Ref": "AWS::Region"
 										},
+										"account": {
+											"Ref": "AWS::AccountId"
+										},
+										"lambda": {
+											"Ref": "LambdaFunction"
+										}
+									}
+								]
+							}
+						},
+						{
+							"Effect": "Allow",
+							"Action": [
+								"ses:SendEmail"
+							],
+							"Resource": {
+								"Fn::Sub": [
+									"arn:aws:ses:eu-west-1:${account}:identity/*",
+									{
 										"account": {
 											"Ref": "AWS::AccountId"
 										},
