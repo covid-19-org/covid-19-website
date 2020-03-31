@@ -1,24 +1,18 @@
 import React, { useState } from "react"
-import { Alert, AlertIcon, AlertTitle, AlertDescription, Input, FormControl, FormLabel, Heading, Button } from "@chakra-ui/core"
+import { Alert, AlertIcon, AlertTitle, AlertDescription, Heading, Button } from "@chakra-ui/core"
 import Amplify, { API } from 'aws-amplify';
+import { Formik } from "formik";
 
+import Field from "../components/field"
 import Layout from "../components/layout"
 import Section from "../components/section"
 import SEO from "../components/seo"
 import awsconfig from '../aws-exports';
-import { Formik, Field, ErrorMessage } from "formik";
 
 Amplify.configure(awsconfig);
 
 const apiName = 'apid510b2bc';
 const path = '/volunteer'
-
-const validateRequired = (v) => v ? null : 'Required';
-
-const formControlProps = {
-  marginBottom: 5,
-  isRequired: true,
-}
 
 const TechVolunteersForm = () => {
   const [result, setResult] = useState({});
@@ -71,25 +65,17 @@ const TechVolunteersForm = () => {
           <Formik onSubmit={submitForm} initialValues={{ fullName: '', email: '' }}>
             {props => (
               <form onSubmit={props.handleSubmit}>
-                <Field name="fullName" validate={validateRequired}>
-                  {({ field, form }) => (
-                    <FormControl isInvalid={form.errors.fullName && form.touched.fullName} {...formControlProps}>
-                      <FormLabel htmlFor="full_name">Full Name</FormLabel>
-                      <Input {...field} id="full_name"></Input>
-                      <ErrorMessage name="fullName"></ErrorMessage>
-                    </FormControl>
-                  )}
-                </Field>
-
-                <Field name="email" validate={validateRequired}>
-                  {({ field, form }) => (
-                    <FormControl isInvalid={form.errors.email && form.touched.email} paddingBottom={5} isRequired>
-                      <FormLabel htmlFor="email">Email</FormLabel>
-                      <Input {...field} id="email" type="email"></Input>
-                      <ErrorMessage name="email"></ErrorMessage>
-                    </FormControl>
-                  )}
-                </Field>
+                <Field label="Full Name" isRequired />
+                <Field label="Email" type="email" isRequired />
+                <Field
+                  label="Location (City, Country)"
+                  helperText="Where are you currently based or spend the most time in?"
+                  isRequired
+                />
+                <Field
+                  label="Mobile Number"
+                  helperText="The mobile number will help the project owner reach you with time-sensitive requests"
+                />
 
                 <Button
                   variantColor="blue"
