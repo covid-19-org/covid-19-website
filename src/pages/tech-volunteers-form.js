@@ -62,7 +62,7 @@ const TechVolunteersForm = () => {
           </Alert>}
 
         {result.status === "success" ||
-          <Formik onSubmit={submitForm} initialValues={{ fullName: '', email: '' }}>
+          <Formik onSubmit={submitForm} initialValues={{ fullName: '', email: '', sessions: '' }}>
             {props => (
               <form onSubmit={props.handleSubmit}>
                 <Field label="Full Name" isRequired />
@@ -75,6 +75,19 @@ const TechVolunteersForm = () => {
                 <Field
                   label="Mobile Number"
                   helperText="The mobile number will help the project owner reach you with time-sensitive requests"
+                />
+
+                <Field
+                  label="How many sessions of volunteering (2-3 hours) can you commit to per week?"
+                  type="radio"
+                  options={[
+                    "1 session",
+                    "2 sessions",
+                    "3 sessions",
+                    "4+ sessions",
+                    "I can work on this full-time",
+                  ]}
+                  isRequired
                 />
 
                 <Button
