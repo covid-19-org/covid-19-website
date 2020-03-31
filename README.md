@@ -3,7 +3,7 @@
 
 **code4covid** is a community of tech volunteers whose mission is to find technology solutions to help people during the COVID-19 crisis: we believe that technology can minimise the disruption caused by the pandemic and ultimately save lives.
 
-Formed as a [Slack group](https://join.slack.com/t/code4covid/shared_invite/zt-cms2o7rm-FtmF~455wnm6ce108Gqggg) on March 16th by a couple of ex-colleagues, the code4covid community now counts over 400 tech volunteers: and with other groups joining in, it keeps growing!
+Formed as a [Slack group](https://join.slack.com/t/code4covid/shared_invite/zt-cms2o7rm-FtmF~455wnm6ce108Gqggg) on March 16th by a couple of ex-colleagues, the code4covid community now counts over 700 tech volunteers: and with other groups joining in, it keeps growing!
 
 To ensure energy gets directed to the right places and efforts are not duplicated, we are also collaborating with initiatives formed by other inspiring groups as part of the COVID-19 Tech Response.
 
