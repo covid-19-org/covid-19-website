@@ -21,7 +21,7 @@ const PartnerWithUs = () => {
           src="https://airtable.com/embed/shrtSXiyO1dPOOfiW?backgroundColor=yellow"
           frameBorder="0"
           width="100%"
-          height="1940"
+          height="3050"
           background="transparent"
           onLoad={hideSpinner}
         />
