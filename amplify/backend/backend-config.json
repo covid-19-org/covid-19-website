@@ -24,6 +24,20 @@
 					}
 				}
 			]
+		},
+		"covid19website8d3128c7": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "dynamo6d643438",
+					"attributes": [
+						"StreamArn"
+					]
+				}
+			]
 		}
 	},
 	"api": {
