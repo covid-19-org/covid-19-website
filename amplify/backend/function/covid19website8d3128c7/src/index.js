@@ -1,8 +1,7 @@
-const AWS = require('aws-sdk');
-const sendVolunteerEmail = require('./send-volunteer-email')
+const Airtable = require('airtable');
+const updateAirtable = require('./update-airtable')
 
-exports.handler = function(event, context) {
+exports.handler = function(event) {
   console.log(JSON.stringify(event, null, 2));
-  return sendVolunteerEmail({ AWS, event })
-  context.done(null, 'Successfully processed DynamoDB record'); // SUCCESS with message
+  return updateAirtable({ Airtable, env: process.env, event })
 };
