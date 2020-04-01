@@ -1,18 +1,16 @@
-import React, { useRef } from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Spinner, Box } from "@chakra-ui/core"
 
 const TechVolunteersForm = () => {
-  const spinnerRef = useRef();
-
-  const hideSpinner = () => spinnerRef.current.style.display = 'none';
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
-  <Layout>
+    <Layout>
       <SEO title="Tech Volunteers Form" />
       <Box textAlign="center">
-        <Spinner ref={spinnerRef} marginTop={200}/>
+        {isLoading && <Spinner marginTop={200}/>}
 
         <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
         <iframe
@@ -23,7 +21,7 @@ const TechVolunteersForm = () => {
           width="100%"
           height="2330"
           background="transparent"
-          onLoad={hideSpinner}
+          onLoad={() => setIsLoading(false)}
         ></iframe>
       </Box>
     </Layout>
