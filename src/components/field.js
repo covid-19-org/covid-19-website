@@ -1,47 +1,37 @@
 import React from "react";
-import { Field as FormikField, ErrorMessage } from "formik";
 import { FormControl, FormLabel, Input, FormHelperText, RadioGroup, Radio } from "@chakra-ui/core";
-import camelCase from 'lodash/camelCase';
-import kebabCase from 'lodash/kebabCase';
 
 const formControlProps = {
   marginBottom: 50,
 }
 
-const validateRequired = (v) => v ? null : 'Required';
+const buildInput = ({ type, options, id, handleChange, value }) => {
+  const _handleChange = (e) => handleChange(e, id);
 
-const buildChakraElement = ({ type, field, options, id }) => {
   return type === "radio" ?
-    <RadioGroup {...field} name="sessions">
-      {options.map((o) => <Radio value={o}>{o}</Radio>)}
+    <RadioGroup onChange={_handleChange} value={value}>
+      {options.map((o) => <Radio key={o} value={o}>{o}</Radio>)}
     </RadioGroup> :
-    <Input {...field} id={id} type={type}></Input>
+    <Input onChange={_handleChange} id={id} type={type} value={value}></Input>
 }
 
-const Field = ({ label, type, isRequired, helperText, options }) => {
-  const id = kebabCase(label);
-  const key = camelCase(label);
+const Field = ({ id, label, type, isRequired, isInvalid, helperText, options, handleChange, values }) => {
   const helperTextId = id + '-helper-text';
+  const value = values[id];
 
-  const validate = isRequired ? validateRequired : null;
+  const input = buildInput({ type, options, id, handleChange, value });
 
-  return <FormikField name={key} validate={validate}>
-    {({ field, form }) => {
-      const isInvalid = form.errors[key] && form.touched[key];
-
-      return <FormControl
-        isInvalid={isInvalid}
-        isRequired={isRequired}
-        {...formControlProps}
-      >
-        <FormLabel htmlFor={id}>{label}</FormLabel>
-        {helperText && <FormHelperText id={helperTextId} marginBottom={3}>{helperText}</FormHelperText>}
-        {buildChakraElement({ type, field, options, id })}
-
-        {isInvalid && <ErrorMessage name={key} />}
-      </FormControl>
-    }}
-  </FormikField>;
+  return (
+    <FormControl
+      isInvalid={isInvalid}
+      isRequired={isRequired}
+      {...formControlProps}
+    >
+      <FormLabel htmlFor={id}>{label}</FormLabel>
+      {helperText && <FormHelperText id={helperTextId} marginBottom={3}>{helperText}</FormHelperText>}
+      {input}
+    </FormControl>
+  );
 };
 
 export default Field;
