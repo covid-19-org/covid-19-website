@@ -1,34 +1,22 @@
 {
-    "develop": {
+    "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-covid-19-website-develop-153929-authRole",
-            "UnauthRoleArn": "arn:aws:iam::616908603126:role/amplify-covid-19-website-develop-153929-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::616908603126:role/amplify-covid-19-website-develop-153929-authRole",
+            "AuthRoleName": "amplify-covid-19-website-dev-181919-authRole",
+            "UnauthRoleArn": "arn:aws:iam::954225943395:role/amplify-covid-19-website-dev-181919-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::954225943395:role/amplify-covid-19-website-dev-181919-authRole",
             "Region": "eu-west-2",
-            "DeploymentBucketName": "amplify-covid-19-website-develop-153929-deployment",
-            "UnauthRoleName": "amplify-covid-19-website-develop-153929-unauthRole",
-            "StackName": "amplify-covid-19-website-develop-153929",
-            "StackId": "arn:aws:cloudformation:eu-west-2:616908603126:stack/amplify-covid-19-website-develop-153929/203e5dc0-70ae-11ea-ace0-060395953c4e",
-            "AmplifyAppId": "d2fo2hxd88zld0"
+            "DeploymentBucketName": "amplify-covid-19-website-dev-181919-deployment",
+            "UnauthRoleName": "amplify-covid-19-website-dev-181919-unauthRole",
+            "StackName": "amplify-covid-19-website-dev-181919",
+            "StackId": "arn:aws:cloudformation:eu-west-2:954225943395:stack/amplify-covid-19-website-dev-181919/47915910-74b2-11ea-8e11-0aad4e0395e8",
+            "AmplifyAppId": "du43hqzd9ye4n"
         },
         "categories": {
             "function": {
                 "covid19website391de842": {},
-                "covid19website8d3128c7": {}
+                "covid19website8d3128c7": {},
+                "dynamo6d643438": {}
             }
-        }
-    },
-    "master": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-covid-19-website-master-152823-authRole",
-            "UnauthRoleArn": "arn:aws:iam::616908603126:role/amplify-covid-19-website-master-152823-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::616908603126:role/amplify-covid-19-website-master-152823-authRole",
-            "Region": "eu-west-2",
-            "DeploymentBucketName": "amplify-covid-19-website-master-152823-deployment",
-            "UnauthRoleName": "amplify-covid-19-website-master-152823-unauthRole",
-            "StackName": "amplify-covid-19-website-master-152823",
-            "StackId": "arn:aws:cloudformation:eu-west-2:616908603126:stack/amplify-covid-19-website-master-152823/93b83430-70ac-11ea-8e8b-06af0f49b59c",
-            "AmplifyAppId": "d2fo2hxd88zld0"
         }
     }
 }
