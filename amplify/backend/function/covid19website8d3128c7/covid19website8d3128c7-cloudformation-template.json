@@ -66,7 +66,7 @@
 				"Runtime": "nodejs12.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-covid-19-website-dev-181919-deployment",
+					"S3Bucket": "covid-19-website-develop-20200402073645-deployment",
 					"S3Key": "amplify-builds/covid19website8d3128c7-3537786a614f79422b32-build.zip"
 				}
 			}
