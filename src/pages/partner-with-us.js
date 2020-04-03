@@ -15,7 +15,7 @@ const PartnerWithUs = () => {
         <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js" />
         <iframe
           title="Partner with Us Form"
-          class="airtable-embed airtable-dynamic-height"
+          className="airtable-embed airtable-dynamic-height"
           src="https://airtable.com/embed/shrtSXiyO1dPOOfiW?backgroundColor=yellow"
           frameBorder="0"
           width="100%"
