@@ -54,7 +54,7 @@ const Header = () => {
         <Code4Covid width={200}/>
       </GatsbyLink>
       <IconButton
-        display={["block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
+        display={["block", "block", "block", "block", "none"]} // Match this with the inverse of the buttons stack to use Chakra breakpoints
         variant="ghost"
         size="lg"
         aria-label="Navigation Button"
@@ -62,7 +62,7 @@ const Header = () => {
         onClick={onOpen}
       />
       <Stack
-        display={["none", "none", "block"]}
+        display={["none", "none", "none", "none", "block"]}
         as="nav"
         direction="row"
         spacing={1}
