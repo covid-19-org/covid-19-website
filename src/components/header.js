@@ -21,14 +21,22 @@ import { Link as GatsbyLink } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
-  { children: "Support Resources", to: "/support-resources/" },
+  { children: "Get Tech Support ", to: "https://covidtechsupport.com" },
   { children: "Tech Volunteers!", to: "/tech-volunteers/" },
   { children: "Partner with Us!", to: "/partner-with-us/" },
 ]
 
-const NavLink = props => (
-  <Button variant="ghost" fontSize="20px" as={GatsbyLink} fontWeight={500} {...props}/>
-)
+const NavLink = props => {
+  const isExternal = props.to.startsWith('http');
+  const linkElement = isExternal ? Link : GatsbyLink;
+  const adjustedProps = {
+    ...props,
+    target: isExternal ? '_blank' : null,
+    href: isExternal ? props.to : null,
+  };
+
+  return <Button variant="ghost" fontSize="20px" as={linkElement} fontWeight={500} {...adjustedProps} />
+}
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
