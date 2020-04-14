@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Button, Heading, Text, List, ListItem, Link } from "@chakra-ui/core"
+import { Box, Button, Flex, Heading, Text, List, ListItem, Link } from "@chakra-ui/core"
 import { Link as GatsbyLink } from "gatsby"
 import Section from "../components/section"
 
@@ -11,6 +11,20 @@ const headerStyling = {
   maxWidth: "1400px",
   fontWeight: "bold",
   marginTop: [5,10],
+}
+
+const headerContainerProps ={
+  width: ["100%", "100%", "100%", "100%","100%"],
+}
+
+const ctaProps = {
+  color: "black",
+  backgroundColor: "yellow",
+  display: ["none","none","block","block","block"],
+  fontSize: ["14px", "14px", "28px", "28px", "28px"],
+  margin: "100px 20px 140px 20px",
+  padding: "40px 60px",
+  width: ["30%", "30%", "30%", "50%", "50%"],
 }
 
 const buttonStyling = {
@@ -25,10 +39,18 @@ const IndexPage = () => (
       backgroundColor={"purple"}
       paddingY={[1,8]}
     >
-      <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
-      <Link href="https://covidtechsupport.com/" isExternal>
-        <Button {...buttonStyling}>GET TECH SUPPORT</Button>
-      </Link>
+      <Flex>
+        <Box {...headerContainerProps}>
+          <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
+          <Link href="https://covidtechsupport.com/" isExternal>
+            <Button {...buttonStyling}>GET TECH SUPPORT</Button>
+          </Link>
+        </Box>
+        <Box {...ctaProps}>
+          <Heading>Tech Support</Heading>
+          <Link>Click here if you need Tech support with your set-up</Link>
+        </Box>
+      </Flex>
       <Heading {...headerStyling}>
         Tech Volunteer? Join the <i>#code4covid</i> Community
       </Heading>
