@@ -20,11 +20,31 @@ const headerContainerProps ={
 const ctaProps = {
   color: "black",
   backgroundColor: "yellow",
+  display: ["block","block","block","block","block"],
+  fontSize: ["10px", "13px", "26px", "26px", "26px"],
+  fontWeight: ["bold","bold","normal","normal","normal"],
+  margin: [
+    "40px -5px 0px -20px",
+    "20px -60px 0px 10px",
+    "80px -72px 0px 20px",
+    "80px -72px 0px 20px",
+    "80px -72px 0px 20px",
+  ],
+  padding: [
+    "10px",
+    "15px",
+    "30px 30px 30px 80px",
+    "30px 30px 30px 80px",
+    "30px 30px 30px 80px",
+  ],
+  height: ["8em","8em","11em","9em","9em"],
+  width: ["50%", "50%", "75%", "80%", "50%"],
+  borderRadius: ["5px","5px","5px","0px","0px"]
+}
+
+const ctaHeadingProps = {
   display: ["none","none","block","block","block"],
-  fontSize: ["14px", "14px", "28px", "28px", "28px"],
-  margin: "100px 20px 140px 20px",
-  padding: "40px 60px",
-  width: ["30%", "30%", "30%", "50%", "50%"],
+  fontSize: ["32px", "32px", "32px", "32px", "32px"],
 }
 
 const buttonStyling = {
@@ -47,8 +67,8 @@ const IndexPage = () => (
           </Link>
         </Box>
         <Box {...ctaProps}>
-          <Heading>Tech Support</Heading>
-          <Link>Click here if you need Tech support with your set-up</Link>
+          <Heading {...ctaHeadingProps}>Tech Support</Heading>
+          <Link href="https://covidtechsupport.com/" isExternal>Click here if you need tech support with your set-up</Link>
         </Box>
       </Flex>
       <Heading {...headerStyling}>
