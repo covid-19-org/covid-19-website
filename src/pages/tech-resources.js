@@ -21,12 +21,21 @@ const TechVolunteers = () => {
         fontSize={[16, 16, 24]}
         padding={[0]}
       >
-        <AspectRatioBox ratio={1} width="100%" height="2460px">
-          <Box
-            as="iframe"
+        <Box textAlign="center">
+          {isLoading && <Spinner marginTop={200}/>}
+
+          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+          <iframe
+            title="Get Tech Resources"
             src="https://airtable.com/embed/shrL2Y8xYRKSmy0dZ?backgroundColor=blue"
-          />
-        </AspectRatioBox>
+            className="airtable-embed airtable-dynamic-height"
+            frameBorder="0"
+            width="100%"
+            height="2330"
+            background="transparent"
+            onLoad={() => setIsLoading(false)}
+          ></iframe>
+        </Box>
       </Section>
     </Layout>
   )
