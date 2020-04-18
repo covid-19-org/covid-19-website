@@ -16,7 +16,7 @@ const textStyling = {
 const TechVolunteers = () => {
   return (
     <Layout>
-      <SEO title="Get Tech Support" />
+      <SEO title="Get Tech Resources" />
       <Section
         fontSize={[16, 16, 24]}
         padding={[0]}
@@ -24,7 +24,6 @@ const TechVolunteers = () => {
         <AspectRatioBox ratio={1} width="100%" height="2460px">
           <Box
             as="iframe"
-            title="naruto"
             src="https://airtable.com/embed/shrL2Y8xYRKSmy0dZ?backgroundColor=blue"
           />
         </AspectRatioBox>

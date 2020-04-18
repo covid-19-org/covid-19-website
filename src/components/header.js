@@ -21,7 +21,7 @@ import { Link as GatsbyLink } from "gatsby"
 
 const PAGES = [
   { children: "Home", to: "/" },
-  { children: "Get Tech Support ", to: "/tech-support/" },
+  { children: "Get Tech Resources ", to: "/tech-resources/" },
   { children: "Tech Volunteers!", to: "/tech-volunteers/" },
   { children: "Partner with Us!", to: "/partner-with-us/" },
 ]
