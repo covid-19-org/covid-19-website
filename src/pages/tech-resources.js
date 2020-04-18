@@ -1,7 +1,5 @@
-import React from "react"
-import { AspectRatioBox, Box, Heading, Button, Text, List, ListItem } from "@chakra-ui/core"
-import { Link } from "gatsby"
-import { Spinner, Box } from "@chakra-ui/core"
+import React, { useState }  from "react"
+import { Box, Spinner } from "@chakra-ui/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,6 +13,8 @@ const textStyling = {
 }
 
 const TechVolunteers = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <Layout>
       <SEO title="Get Tech Resources" />
