@@ -26,7 +26,7 @@ const IndexPage = () => (
       paddingY={[1,8]}
     >
       <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
-      <Link href="https://covidtechsupport.com/" isExternal>
+      <Link href="/tech-support/">
         <Button {...buttonStyling}>GET TECH RESOURCES</Button>
       </Link>
       <Heading {...headerStyling}>
