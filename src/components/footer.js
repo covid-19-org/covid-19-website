@@ -21,7 +21,7 @@ const Footer = () => (
       </Heading>
       <List textDecoration="underline" lineHeight={2}>
         <ListItem>
-          <GatsbyLink to="/support-resources">Support Resources</GatsbyLink>
+          <GatsbyLink to="/tech-resources/">Get Tech Resources</GatsbyLink>
         </ListItem>
         <ListItem>
           <GatsbyLink to="/tech-volunteers">Tech Volunteers</GatsbyLink>

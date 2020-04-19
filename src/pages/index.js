@@ -62,8 +62,8 @@ const IndexPage = () => (
       <Flex>
         <Box {...headerContainerProps}>
           <Heading {...headerStyling}>Need tech resources <br/> for a project?</Heading>
-          <Link href="https://covidtechsupport.com/" isExternal>
-            <Button {...buttonStyling}>GET TECH SUPPORT</Button>
+          <Link href="/tech-resources/" isExternal>
+            <Button {...buttonStyling}>GET TECH RESOURCES</Button>
           </Link>
         </Box>
         <Box {...ctaProps}>
@@ -115,6 +115,9 @@ const IndexPage = () => (
         </ListItem>
         <ListItem>
           <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://helpwithcovid.com" isExternal>helpwithcovid.com</Link> - International volunteer sign ups and ideas board
+        </ListItem>
+        <ListItem>
+          <Link textDecoration="underline" fontWeight={500} _hover={{ fontWeight: 700 }} href="https://covidtechsupport.com/" isExternal>covidtechsupport.com</Link> - Platform to request tech support
         </ListItem>
       </List>
     </Section>
