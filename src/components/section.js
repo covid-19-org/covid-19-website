@@ -5,6 +5,7 @@ const Section = (props) => (
   <Box
     as="section"
     paddingX={["1rem", "4.5rem"]}
+    backgroundColor="white"
     {...props}
   >
     {props.children}
