@@ -61,37 +61,6 @@ const Header = () => {
         icon="menu"
         onClick={onOpen}
       />
-      <Stack
-        display={["none", "none", "none", "none", "block"]}
-        as="nav"
-        direction="row"
-        spacing={1}
-      >
-        {PAGES.map(page => (
-          <NavLink
-            _hover={{ color: "gray.400" }}
-            color="gray.700"
-            fontWeight={700}
-            key={page.children + page.to}
-            css={css`
-              [aria-current]& {
-                color: #A0AEC0;
-              }
-            `}
-            {...page}
-          />
-        ))}
-        <Button
-          as={Link}
-          variant="ghost"
-          _hover={{}}
-          target="blank"
-          href="https://twitter.com/code4covid"
-          name="Twitter"
-        >
-          <TwitterIcon width={25} height={25} style={{ display: "inline-block" }} role="img"/>
-        </Button>
-      </Stack>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DarkMode>
