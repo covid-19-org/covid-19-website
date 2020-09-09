@@ -71,7 +71,7 @@ class IndexPage extends React.Component {
         <Flex>
           <Box {...headerContainerProps}>
             <Text {...headerStyling}>We're making some changes, you will be redirected to our sister website</Text>
-            <Link href="https://covidtechsupport.com/" isExternal>
+            <Link href="https://covidtechsupport.com/">
               <Button {...buttonStyling}>Click here if not redirected</Button>
             </Link>
           </Box>
